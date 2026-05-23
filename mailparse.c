@@ -26,7 +26,7 @@
 #include "main/php_output.h"
 #include "php_open_temporary_file.h"
 
-#include "arginfo.h"
+#include "mailparse_arginfo.h"
 
 #define MAILPARSE_DECODE_NONE		0		/* include headers and leave section untouched */
 #define MAILPARSE_DECODE_8BIT		1		/* decode body into 8-bit */
