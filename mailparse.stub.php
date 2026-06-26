@@ -2,6 +2,7 @@
 
 /**
  * @generate-class-entries
+ * @generate-legacy-arginfo
  */
 
 function mailparse_test(mixed $header): mixed {}
@@ -11,9 +12,6 @@ function mailparse_test(mixed $header): mixed {}
  */
 function mailparse_uudecode_all($fp): mixed {}
 
-/**
- * @param resource $fp
- */
 function mailparse_rfc822_parse_addresses(string $addresses): array {}
 
 /**
@@ -62,7 +60,7 @@ function mailparse_msg_get_structure($fp): array {}
 function mailparse_msg_extract_part(
     $fp,
     string $msgbody,
-    callable|null $callback = null
+    mixed $callback = null
 ): string|bool {}
 
 
@@ -71,8 +69,8 @@ function mailparse_msg_extract_part(
  */
 function mailparse_msg_extract_whole_part_file(
     $fp,
-    string $filename,
-    callable|null $callback = null
+    mixed $filename,
+    mixed $callback = null
 ): string|bool {}
 
 
@@ -81,8 +79,8 @@ function mailparse_msg_extract_whole_part_file(
  */
 function mailparse_msg_extract_part_file(
     $fp,
-    string $filename,
-    callable|null $callback = null
+    mixed $filename,
+    mixed $callback = null
 ): string|bool {}
 
 
@@ -98,7 +96,7 @@ function mailparse_msg_get_part_data($fp): array {}
  */
 function mailparse_msg_get_part($fp, string $data){}
 
-class mailparse_mimemessage
+class mimemessage
 {
     public function __construct(mixed $mode, mixed $source) {}
 
